@@ -9,8 +9,8 @@ Na de ADD button te hebben geklikt moet je het volgende missende woord invullen,
 
 ![](https://github.com/otak007/Mad-Libs/blob/master/Screenshot_20190301-104415.png) ![](https://github.com/otak007/Mad-Libs/blob/master/Screenshot_20190301-104418.png)
 ![](https://github.com/otak007/Mad-Libs/blob/master/Screenshot_20190301-104401.png)![](https://github.com/otak007/Mad-Libs/blob/master/Screenshot_20190301-114751.png)
-![](https://github.com/otak007/Mad-Libs/blob/master/Screenshot_20190301-104524.png)![](https://github.com/otak007/Mad-Libs/blob/master/Screenshot_20190301-104451.png)
-![](https://github.com/otak007/Mad-Libs/blob/master/Screenshot_20190301-104524.png)![](https://github.com/otak007/Mad-Libs/blob/master/Screenshot_20190301-104427.png)
+![](https://github.com/otak007/Mad-Libs/blob/master/Screenshot_20190301-104445.png)![](https://github.com/otak007/Mad-Libs/blob/master/Screenshot_20190301-104451.png)
+![](https://github.com/otak007/Mad-Libs/blob/master/Screenshot_20190301-104524.png)![](https://github.com/otak007/Mad-Libs/blob/master/Screenshot_20190301-104527.png)
 
 
 
