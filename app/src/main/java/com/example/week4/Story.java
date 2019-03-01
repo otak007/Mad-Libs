@@ -33,7 +33,7 @@ public class Story implements Serializable {
         text = "";
         placeholders = new ArrayList<String>();
         filledIn = 0;
-        htmlMode = false;
+        htmlMode = true;
         clear();
     }
 
@@ -96,7 +96,8 @@ public class Story implements Serializable {
                 // (make them bold so that they stand out!)
                 if (htmlMode) {
                     text += " <b><" + placeholders.size() + "></b>";
-                } else {
+                }
+                else {
                     text += " <" + placeholders.size() + ">";
                 }
                 // "<plural-noun>" becomes "plural noun"
