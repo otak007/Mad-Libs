@@ -3,12 +3,11 @@ package com.example.week4;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import java.io.InputStream;
 
-public class ChooseStory extends AppCompatActivity {
+public class ChooseStoryActivity extends AppCompatActivity {
 
     private InputStream simple;
     private InputStream tarzan;
@@ -53,14 +52,14 @@ public class ChooseStory extends AppCompatActivity {
         // Go to the SetWord page with the story with the retrieved text
         Story story = new Story(retrievedText);
         Intent intent = new Intent();
-        intent.setClass(ChooseStory.this, SetWords.class);
+        intent.setClass(ChooseStoryActivity.this, SetWordsActivity.class);
         intent.putExtra("clicked_story", story);
         startActivity(intent);
     }
 
     // Go back to the welcome screen
     public void onBackPressed() {
-        Intent intent = new Intent(ChooseStory.this, MainActivity.class);
+        Intent intent = new Intent(ChooseStoryActivity.this, MainActivity.class);
         startActivity(intent);
     }
 }

@@ -5,8 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import java.io.InputStream;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,10 +13,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
     }
-    // Go to the ChooseStory page after click on the GET STARTED button
+    // Go to the ChooseStoryActivity page after click on the GET STARTED button
     public void startGame(View view){
         Intent intent = new Intent();
-        intent.setClass(MainActivity.this, ChooseStory.class);
+        intent.setClass(MainActivity.this, ChooseStoryActivity.class);
         startActivity(intent);
     }
 }

@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 
-public class PrintText extends AppCompatActivity {
+public class PrintTextActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +27,9 @@ public class PrintText extends AppCompatActivity {
     public void resetStory(View view){
         onBackPressed();
     }
-    // Go to the ChooseStory page to make another story
+    // Go to the ChooseStoryActivity page to make another story
     public void onBackPressed() {
-        Intent intent = new Intent(PrintText.this, ChooseStory.class);
+        Intent intent = new Intent(PrintTextActivity.this, ChooseStoryActivity.class);
         startActivity(intent);
     }
     public static Spanned fromHtml(String text){

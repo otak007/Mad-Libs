@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class SetWords extends AppCompatActivity {
+public class SetWordsActivity extends AppCompatActivity {
 
     Story story;
     TextView emptyPlaceholders;
@@ -27,15 +27,15 @@ public class SetWords extends AppCompatActivity {
         emptyPlaceholders = findViewById(R.id.emptyPlaceholders);
         emptyPlaceholders.setText(Integer.toString(story.getPlaceholderRemainingCount()) + " word(s) left");
         kindOfWord = findViewById(R.id.textView4);
-        kindOfWord.setText("Please place a/an " + story.getNextPlaceholder());
+        kindOfWord.setText("Please place a/an " + story.getNextPlaceholder().toLowerCase());
         newWord = findViewById(R.id.newWord);
-        newWord.setHint(story.getNextPlaceholder());
+        newWord.setHint(story.getNextPlaceholder().toLowerCase());
     }
-    // Show the ChooseStory page by pressing on the back button
+    // Show the ChooseStoryActivity page by pressing on the back button
     @Override
     public void onBackPressed() {
         story.clear();
-        Intent intent = new Intent(SetWords.this, ChooseStory.class);
+        Intent intent = new Intent(SetWordsActivity.this, ChooseStoryActivity.class);
         startActivity(intent);
     }
 
@@ -47,13 +47,12 @@ public class SetWords extends AppCompatActivity {
         }
         else {
             // Fill the typed word in the placeholder
-            story.htmlMode = true;
             story.fillInPlaceholder( newWord.getText().toString());
             //story.htmlMode = false;
             // Go to next page when all placeholders are filled in
             if (story.isFilledIn()) {
                 Intent intent = new Intent();
-                intent.setClass(SetWords.this, PrintText.class);
+                intent.setClass(SetWordsActivity.this, PrintTextActivity.class);
                 String text = story.toString();
                 intent.putExtra("typed_story", text);
                 startActivity(intent);
@@ -61,11 +60,10 @@ public class SetWords extends AppCompatActivity {
             // Show the "next screen" with properties of the new placeholder
             else {
                 Toast.makeText(this, "Great! Keep going", Toast.LENGTH_SHORT).show();
-                story.getNextPlaceholder();
                 newWord.setText("");
                 emptyPlaceholders.setText(Integer.toString(story.getPlaceholderRemainingCount()) + " word(s) left");
-                kindOfWord.setText("Please place a/an " + story.getNextPlaceholder());
-                newWord.setHint(story.getNextPlaceholder());
+                kindOfWord.setText("Please place a/an " + story.getNextPlaceholder().toLowerCase());
+                newWord.setHint(story.getNextPlaceholder().toLowerCase());
             }
         }
     }
